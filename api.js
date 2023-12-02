@@ -72,8 +72,8 @@ function refresh(){
     refreshElement.innerHTML = `Refreshed: ${now}`
 }
 
-// refresh()
+refresh()
 
 setInterval(function(){
-    // refresh()
+    refresh()
 }, 10*1000)
