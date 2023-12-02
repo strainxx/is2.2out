@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is 2.2 OUT?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="popup">Misinformation warning: site cannot access game version number, so data can be innacurate because when public update timestamp != 1511222225 it thinks what 2.2 released <button style="background: none; border: none; background-color: antiquewhite; border-radius: 2px; margin: 1px; height: 30px; width: 32px; text-align: center;", onclick="document.getElementById('popup').remove()">OK</button></div>
+    <div class="header">Is 2.2 released?</div>
+    <br><br>
+    <div id="answer">IDK</div>
+    <br><br><br><br><br><br>
+    <div id="details">Last public update: <div id="pub">date</div><br>
+    Last beta update: <div id="beta">date</div></div>
+    <br><br><br><br><br><br>
+    API response:<br><br>
+    <samp style="color: antiquewhite;" id="resp">there will be responce</samp>
+    <script src="api.js"></script>
+</body>
+</html>

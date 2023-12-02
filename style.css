@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+body{
+    background-color: #31304D;
+    font-family: 'Lato', sans-serif;
+    color: #EE7214;
+    text-align: center;
+}
+
+#popup{
+    color: #31304D;
+    background-color: #DF826C;
+}
+
+.header{
+    font-size: 60px;
+}
+
+#answer{
+    font-size: 80px;
+    color: #BED754;
+}
+
+#details{
+    color: #d75854;
+    font-family: 'Montserrat', sans-serif;
+    
+}
