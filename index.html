@@ -12,12 +12,15 @@
     <div class="header">Is 2.2 released?</div>
     <br><br>
     <div id="answer">IDK</div>
-    <br><br><br><br><br><br>
+    <div id="refreshed">Refreshed: </div>
+    <br><br><button style="color: #F9E8D9; background-color: #E3651D; border: none; font-size: larger; border-radius: 2px;", onclick="refresh()">REFRESH</button><br><br>
     <div id="details">Last public update: <div id="pub">date</div><br>
     Last beta update: <div id="beta">date</div></div>
-    <br><br><br><br><br><br>
-    API response:<br><br>
-    <samp style="color: antiquewhite;" id="resp">there will be responce</samp>
+    <br><br><br><br>
+    <div onclick="copyTextToClipboard(document.getElementById('resp').innerText)">Copy API response</div><br><br>
+    <img id="github" onclick="window.open('https://github.com/strainxx/is2.2out','_blank')" src="https://icones.pro/wp-content/uploads/2021/06/icone-github-grise.png"\>
+    <samp style="color: antiquewhite; display: none;" id="resp">there will be responce</samp>
+    <samp>Made with ❤️ by strnq.</samp>
     <script src="api.js"></script>
 </body>
 </html>

@@ -27,3 +27,10 @@ body{
     font-family: 'Montserrat', sans-serif;
     
 }
+
+#github{
+    position:absolute;
+    top: 10%;
+    right: 25%;
+    width: 40px;
+}
