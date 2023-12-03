@@ -84,11 +84,6 @@ function refresh(){
     console.log(responseJSON.data["322170"])
     if(pubTime!=last_upd || released){
         answElement.innerText = "Yes"
-        answElement.style.color = "#A3B763"
-        if(play_sound){
-          audio.play()
-        }
-        
     } else {
         answElement.innerText = "No"
         answElement.style.color = "#d75854"
