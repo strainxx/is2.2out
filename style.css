@@ -30,7 +30,16 @@ body{
 
 #github{
     position:absolute;
-    top: 10%;
+    top: 12%;
     right: 25%;
     width: 40px;
+}
+
+#checkbox-wrapper{
+    font-size: small;
+    color: #DF826C;
+}
+
+input::after {
+    height: 100px;
 }

@@ -1,13 +1,27 @@
 let last_upd = 1511222225
 let api = "https://api.steamcmd.net/v1/info/322170"
 
+var audio = new Audio("alarm.mp3");
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  document.getElementById("cb").checked = false
+  console.log("Welcome to the club")
+})
+
+if(localStorage.getItem("popup") == "0"){
+  document.getElementById('popup').remove()
+}
 
 let respElement = document.getElementById("resp")
 let refreshElement = document.getElementById("refreshed")
 let answElement = document.getElementById("answer")
 let pubElement = document.getElementById("pub")
 let betaElement = document.getElementById("beta")
+let play_sound, released;
 
+document.getElementById("cb").addEventListener("change", (e)=>{
+  play_sound = document.getElementById("cb").checked
+})
 
 function httpGet(theUrl)
 {
@@ -52,6 +66,11 @@ function copyTextToClipboard(text) {
   });
 }
 
+function popupClose(){
+  document.getElementById('popup').remove()
+  localStorage.setItem("popup", 0);
+}
+
 function refresh(){
     refreshElement.innerHTML = "Refreshing..."
     let response = httpGet(api)
@@ -63,13 +82,20 @@ function refresh(){
     pubElement.innerText = `${datePub.getDate()}.${datePub.getMonth()+1}.${datePub.getFullYear()}`
     betaElement.innerText = `${dateBeta.getDate()}.${dateBeta.getMonth()+1}.${dateBeta.getFullYear()}`
     console.log(responseJSON.data["322170"])
-    if(pubTime!=last_upd){
+    if(pubTime!=last_upd || released){
         answElement.innerText = "Yes"
+        answElement.style.color = "#A3B763"
+        if(play_sound){
+          audio.play()
+        }
+        
     } else {
         answElement.innerText = "No"
+        answElement.style.color = "#d75854"
     }
     let now = new Date().toLocaleTimeString()
     refreshElement.innerHTML = `Refreshed: ${now}`
+    // audio.play()
 }
 
 refresh()
