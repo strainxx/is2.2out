@@ -65,8 +65,10 @@ function refresh(){
     console.log(responseJSON.data["322170"])
     if(pubTime!=last_upd){
         answElement.innerText = "Yes"
+        answElement.style.color = "#d75854"
     } else {
         answElement.innerText = "No"
+        answElement.style.color = "#d75854"
     }
     let now = new Date().toLocaleTimeString()
     refreshElement.innerHTML = `Refreshed: ${now}`
