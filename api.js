@@ -84,6 +84,7 @@ function refresh(){
     console.log(responseJSON.data["322170"])
     if(pubTime!=last_upd || released){
         answElement.innerText = "Yes"
+        answElement.style.color = "#D0F288"
     } else {
         answElement.innerText = "No"
         answElement.style.color = "#d75854"
