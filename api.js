@@ -85,6 +85,7 @@ function refresh(){
     if(pubTime!=last_upd || released){
         answElement.innerText = "Yes"
         answElement.style.color = "#D0F288"
+        audio.play()
     } else {
         answElement.innerText = "No"
         answElement.style.color = "#d75854"
