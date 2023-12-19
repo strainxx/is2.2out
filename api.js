@@ -84,6 +84,17 @@ function refresh(){
     console.log(responseJSON.data["322170"])
     if(pubTime!=last_upd || released){
         answElement.innerText = "Yes"
+        answElement.classList.add("released")
+        document.getElementById("ref_btn").innerText = "Check Steam"
+        document.getElementById("ref_btn").style.color = "#EEE7DA"
+        document.getElementById("ref_btn").style.backgroundColor = "#88AB8E"
+        document.getElementById("ref_btn").onclick = function(){
+          location.href = "https://store.steampowered.com/app/322170/Geometry_Dash/";
+        }
+        document.title = "2.2 RELEASED!!!!!!!1!!!"
+        if(play_sound){
+          audio.play()
+        }
     } else {
         answElement.innerText = "No"
         answElement.style.color = "#d75854"

@@ -17,6 +17,27 @@ body{
     font-size: 60px;
 }
 
+.released{
+    color: #D0F288 !important;
+    animation: yeee 5s ease-in-out infinite !important;
+}
+
+@keyframes yeee{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(30deg);
+        font-size: 700%;
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-30deg);
+    }
+}
+
 #answer{
     font-size: 80px;
     color: #BED754;
@@ -43,3 +64,4 @@ body{
 input::after {
     height: 100px;
 }
+
