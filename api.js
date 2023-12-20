@@ -77,10 +77,10 @@ function refresh(){
     let responseJSON = JSON.parse(response)
     let pubTime = responseJSON.data["322170"].depots.branches.public.timeupdated
     let datePub = new Date(pubTime*1000)
-    let dateBeta = new Date(responseJSON.data["322170"].depots.branches.beta.timeupdated *1000)
+    //let dateBeta = new Date(responseJSON.data["322170"].depots.branches.beta.timeupdated *1000)
     respElement.innerText = response
     pubElement.innerText = `${datePub.getDate()}.${datePub.getMonth()+1}.${datePub.getFullYear()}`
-    betaElement.innerText = `${dateBeta.getDate()}.${dateBeta.getMonth()+1}.${dateBeta.getFullYear()}`
+    betaElement.innerText = `NEVER :)`
     console.log(responseJSON.data["322170"])
     if(pubTime!=last_upd || released){
         answElement.innerText = "Yes"
